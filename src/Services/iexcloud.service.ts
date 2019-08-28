@@ -2,13 +2,13 @@ import * as dotenv from "dotenv";
 
 import axios from "axios";
 
-import * as EventSource  from "eventsource"
+import * as EventSource from "eventsource";
 
 interface Url {
   hostName: string;
   schema: string;
   path: string;
-  query: any
+  query: any;
 }
 
 const baseURL = "https://cloud.iexapis.com/";
@@ -27,32 +27,32 @@ const aToken = `&token=${pk}`;
 const qToken = `?token=${pk}`;
 
 const prefix = () => {
-  if (pk && pk[0]==="T"){
+  if (pk && pk[0] === "T") {
     return sandboxURL;
   } else {
     return baseURL;
   }
-}
+};
 
-const chooseToken = (str:string) => {
+const chooseToken = (str: string) => {
   if (str.includes("?")) {
-    return aToken
+    return aToken;
   } else {
-    return qToken
+    return qToken;
   }
-}
+};
 
 const constructURL = (endpoint: string): string => {
-   const result = prefix() + apiversion +  endpoint + chooseToken(endpoint)
-   return result;
-}
+  const result = prefix() + apiversion + endpoint + chooseToken(endpoint);
+  return result;
+};
 
 // const constructURL = (endpoint: string | object): string => {
 //   let result: string
 //   if (typeof endpoint === "string") {
 //     result = prefix() + apiversion +  endpoint + chooseToken(endpoint)
 //   } else if ( typeof endpoint === "object" ) {
-    
+
 //   }
 
 //   return result;
@@ -60,9 +60,7 @@ const constructURL = (endpoint: string): string => {
 
 export const iexApiRequest = (endpoint: string): Promise<any> => {
   const iexRestURL = constructURL(endpoint);
-  const result: Promise<any> = axios
-    .get(iexRestURL)
-    .then(res => res.data);
+  const result: Promise<any> = axios.get(iexRestURL).then(res => res.data);
   return result;
 };
 

@@ -15,7 +15,7 @@ export const endOfDay = async (
   chartReset: boolean = false,
   chartSimplify: boolean = false
 ): Promise<EndOfDay[]> => {
-  let endpoint = `/stock/${symbol}/chart/${period}?chartCloseOnly=false`;;
+  let endpoint = `/stock/${symbol}/chart/${period}?chartCloseOnly=false`;
   if (chartLastN > 0) {
     endpoint = endpoint + `&chartLast=${chartLastN}`;
   }

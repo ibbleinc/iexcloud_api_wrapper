@@ -5,14 +5,14 @@ interface KVP {
 }
 
 export const earningsToday = async (
-  symbol: string,
+  symbol: string
 ): Promise<EarningsToday[]> => {
   const endpoint = `/stock/${symbol}/today-earnings/`;
   const data: KVP = await iexApiRequest(endpoint);
   // console.log(data)
   const bto: KVP[] = data.bto;
   const amc: KVP[] = data.amc;
-  const other: KVP[] =data.other;
+  const other: KVP[] = data.other;
 
   const result = bto.map((o: KVP) => {
     const r = Object.assign(new EarningsToday(), o);
@@ -28,11 +28,11 @@ export interface IEXEarningsToday {
   numberOfEstimates: number;
   fiscalPeriod: string;
   fiscalEndDate: string;
-  quote: KVP
+  quote: KVP;
 }
 
 export class EarningsToday implements IEXEarningsToday {
-  public symbol: string="";
+  public symbol: string = "";
   public consensusEPS: number = 0;
   public announceTime: number = 0;
   public numberOfEstimates: number = 0;

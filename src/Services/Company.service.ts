@@ -22,15 +22,15 @@ export interface IEXCompany {
   description: string;
   issueType: string;
   sector: string;
-  securityName: string | null
+  securityName: string | null;
   tags: string[];
-  employees: number | null
+  employees: number | null;
 }
 
 export class Company {
   public symbol: string = "";
   public companyName: string = "";
-  public CEO: string="";
+  public CEO: string = "";
   public exchange: string = "";
   public industry: string = "";
   public website: string = "";

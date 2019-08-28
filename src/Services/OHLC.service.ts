@@ -14,7 +14,7 @@ export const ohlc = async (symbol: string): Promise<OHLC> => {
   result.low = data.low;
   result.openTime = data.open.time;
   result.closeTime = data.close.time;
-  result.symbol = symbol
+  result.symbol = symbol;
   return result;
 };
 

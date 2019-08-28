@@ -6,10 +6,10 @@ interface KVP {
   [k: string]: any;
 }
 
-export type CollectionType = "sector" | "tag" | "list"
+export type CollectionType = "sector" | "tag" | "list";
 
 export const collection = async (
-  collectionType: CollectionType ,
+  collectionType: CollectionType,
   collectionName: string
 ): Promise<Quote[]> => {
   const endpoint = `/stock/market/collection/${collectionType}?collectionName=${collectionName}`;

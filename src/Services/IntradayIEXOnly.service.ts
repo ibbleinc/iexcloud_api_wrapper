@@ -4,7 +4,7 @@ interface KVP {
   [k: string]: any;
 }
 
-import {IntradayIEXOnly} from "./IntradayForDate.service"
+import { IntradayIEXOnly } from "./IntradayForDate.service";
 
 export const intradayIEXOnly = async (
   symbol: string,
@@ -38,5 +38,3 @@ export const intradayIEXOnly = async (
   });
   return result;
 };
-
-

@@ -13,11 +13,11 @@ export const socialSentiment = async (
 ): Promise<null | SocialSentiment | SocialSentiment[]> => {
   let endpoint = `/stock/${symbol}/sentiment/${type}`;
   if (date) {
-    endpoint = endpoint +"/"+ date.replace(/-/g, "");
+    endpoint = endpoint + "/" + date.replace(/-/g, "");
   }
   if (type.includes("daily")) {
     const data: KVP = await iexApiRequest(endpoint);
-    const result: SocialSentiment = Object.assign(new SocialSentiment(),data);
+    const result: SocialSentiment = Object.assign(new SocialSentiment(), data);
     return result;
   } else {
     const data: KVP[] = await iexApiRequest(endpoint);

@@ -34,7 +34,7 @@ export interface IEXEarnings {
 }
 
 export class Earnings implements IEXEarnings {
-  public symbol: string="";
+  public symbol: string = "";
   public actualEPS: number = 0;
   public consensusEPS: number = 0;
   public announceTime: string = "";

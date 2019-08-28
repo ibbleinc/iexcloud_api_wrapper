@@ -79,7 +79,7 @@
 <span class="hljs-comment">// OR</span>
 
 npm <span class="hljs-selector-tag">i</span> iexcloud_api_wrapper</code></pre><p>then in your .env file add the following keys</p>
-				<pre><code><span class="hljs-attr">IEXCLOUD_API_VERSION</span> = <span class="hljs-string">"beta"</span>
+				<pre><code><span class="hljs-attr">IEXCLOUD_API_VERSION</span> = <span class="hljs-string">"stable"</span>
 <span class="hljs-attr">IEXCLOUD_PUBLIC_KEY</span> = <span class="hljs-string">"pk_..."</span>
 <span class="hljs-attr">IEXCLOUD_SECRET_KEY</span> = <span class="hljs-string">"sk_..."</span>
 
@@ -162,8 +162,13 @@ quote(<span class="hljs-string">"WDC"</span>);
 							<td align="left">$9</td>
 						</tr>
 						<tr>
+							<td>Grow</td>
+							<td align="right">100,000,000</td>
+							<td align="left">$59($49 paid annually)</td>
+						</tr>
+						<tr>
 							<td>Scale</td>
-							<td align="right">1,000,000,000</td>
+							<td align="right">2,000,000,000</td>
 							<td align="left">$ 499</td>
 						</tr>
 				</tbody></table>
@@ -210,7 +215,8 @@ quote(<span class="hljs-string">"WDC"</span>);
 					| [x] | Peers | 500 | per symbol
 					| [x] | Previous Day Prices | 2 per symbol
 					| [x] | Price | 1 | per symbol per call
-					| [x] | Price Target | 500 per symbol
+					| [x] | Price Target | 500 | per symbol
+					| [x] | Recommendation Trends | 1000 | per symbol
 					| [x] | Quote | 1 | per quote
 					| [x] | Sector Performance | 1 | per sector
 					| [x] | Social Sentiment, daily | 100 | per date
@@ -295,6 +301,9 @@ quote(<span class="hljs-string">"WDC"</span>);
 						<a href="modules/_accountservices_iexaccount_service_.html">"<wbr>Account<wbr>Services/iexaccount.service"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
+						<a href="modules/_services_advancedstats_service_.html">"<wbr>Services/<wbr>Advanced<wbr>Stats.service"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
 						<a href="modules/_services_balancesheet_service_.html">"<wbr>Services/<wbr>Balance<wbr>Sheet.service"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -302,6 +311,9 @@ quote(<span class="hljs-string">"WDC"</span>);
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_services_cashflowstatement_service_.html">"<wbr>Services/<wbr>Cash<wbr>Flow<wbr>Statement.service"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_services_ceocompensation_service_.html">"<wbr>Services/<wbr>Ceo<wbr>Compensation.service"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_services_collection_service_.html">"<wbr>Services/<wbr>Collection.service"</a>
@@ -334,6 +346,9 @@ quote(<span class="hljs-string">"WDC"</span>);
 						<a href="modules/_services_earnings_service_.html">"<wbr>Services/<wbr>Earnings.service"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
+						<a href="modules/_services_earningstoday_service_.html">"<wbr>Services/<wbr>Earnings<wbr>Today.service"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
 						<a href="modules/_services_effectivespread_service_.html">"<wbr>Services/<wbr>Effective<wbr>Spread.service"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -349,6 +364,9 @@ quote(<span class="hljs-string">"WDC"</span>);
 						<a href="modules/_services_financials_service_.html">"<wbr>Services/<wbr>Financials.service"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
+						<a href="modules/_services_history_service_.html">"<wbr>Services/<wbr>History.service"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
 						<a href="modules/_services_iexsymbol_service_.html">"<wbr>Services/IEXSymbol.service"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -356,6 +374,9 @@ quote(<span class="hljs-string">"WDC"</span>);
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_services_intraday_service_.html">"<wbr>Services/<wbr>Intraday.service"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_services_intradayfordate_service_.html">"<wbr>Services/<wbr>Intraday<wbr>For<wbr>Date.service"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_services_intradayiexonly_service_.html">"<wbr>Services/<wbr>IntradayIEXOnly.service"</a>
@@ -397,6 +418,9 @@ quote(<span class="hljs-string">"WDC"</span>);
 						<a href="modules/_services_quote_service_.html">"<wbr>Services/<wbr>Quote.service"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
+						<a href="modules/_services_recommendationtrends_service_.html">"<wbr>Services/<wbr>Recommendation<wbr>Trends.service"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
 						<a href="modules/_services_sectorperformance_service_.html">"<wbr>Services/<wbr>Sector<wbr>Performance.service"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -416,6 +440,9 @@ quote(<span class="hljs-string">"WDC"</span>);
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_services_iexcloud_service_.html">"<wbr>Services/iexcloud.service"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_streams_tops_stream_.html">"<wbr>Streams/<wbr>Tops.stream"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_index_.html">"index"</a>
