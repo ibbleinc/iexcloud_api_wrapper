@@ -7,9 +7,9 @@ const baseURL = "https://cloud.iexapis.com/";
 dotenv.config();
 
 // TODO make it so that it accepts either upper or lower case
-const sk = process.env.iexcloud_secret_key;
+const sk = process.env.IEXCLOUD_SECRET_KEY;
 
-const apiversion = process.env.iexcloud_api_version;
+const apiversion = process.env.IEXCLOUD_API_VERSION;
 
 const aToken = `&token=${sk}`;
 

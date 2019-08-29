@@ -22,9 +22,23 @@ const pk = process.env.IEXCLOUD_PUBLIC_KEY;
 
 const apiversion = process.env.IEXCLOUD_API_VERSION;
 
-const aToken = `&token=${pk}`;
+let aToken: string;
 
-const qToken = `?token=${pk}`;
+let qToken: string;
+
+const initPk = () => {
+  if (typeof pk !== "undefined") {
+    aToken = `&token=${pk}`;
+    qToken = `?token=${pk}`;
+  }
+};
+
+initPk();
+
+export const setPublicKey = (publicKey: string) => {
+  aToken = `&token=${publicKey}`;
+  qToken = `?token=${publicKey}`;
+};
 
 const prefix = () => {
   if (pk && pk[0] === "T") {
