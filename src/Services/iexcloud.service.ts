@@ -57,7 +57,13 @@ const chooseToken = (str: string) => {
 };
 
 const constructURL = (endpoint: string): string => {
-  const result = prefix() + apiversion + endpoint + chooseToken(endpoint);
+  let av: string;
+  if (typeof apiversion === undefined) {
+    av = apiversion!;
+  } else {
+    av = "stable"; //default to stable
+  }
+  const result = prefix() + av + endpoint + chooseToken(endpoint);
   return result;
 };
 
